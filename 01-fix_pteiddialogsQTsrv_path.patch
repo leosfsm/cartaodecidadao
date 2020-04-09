@@ -1,6 +1,6 @@
---- dialogs/dialogsQT/dlgs.cpp	2017-06-07 21:01:25.043207000 +0100
-+++ dialogs/dialogsQT/dlgs_fixed.cpp	2017-09-22 21:03:43.806012101 +0100
-@@ -431,7 +431,7 @@
+--- src/autenticacao.gov/pteid-mw-pt/_src/eidmw/dialogs/dialogsQT/dlgs.cpp	2020-04-08 17:20:23.939513211 +0200
++++ src/autenticacao.gov/pteid-mw-pt/_src/eidmw/dialogs/dialogsQT/dlgs_fixed.cpp	2020-04-08 17:00:06.599489218 +0200
+@@ -434,7 +434,7 @@
    char csCommand[150];
    Type_WndGeometry *pWndGeometry = (Type_WndGeometry *)wndGeometry;
  
@@ -9,3 +9,10 @@
  
    if  ( ( pWndGeometry != NULL )
          && ( pWndGeometry->x >= 0 ) && ( pWndGeometry->y >= 0 )
+@@ -482,4 +482,4 @@
+     if ( outWndGeometry->y > desktop_height ) return false;
+ 
+     return true;
+-}
+\ No hay ningún carácter de nueva línea al final del fichero
++}

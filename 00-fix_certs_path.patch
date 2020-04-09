@@ -1,6 +1,6 @@
---- common/ConfigCommon.cpp	2017-06-07 21:01:25.043207000 +0100
-+++ common/ConfigCommon_fixed.cpp	2017-09-22 20:53:16.693678311 +0100
-@@ -30,12 +30,12 @@
+--- src/autenticacao.gov/pteid-mw-pt/_src/eidmw/common/ConfigCommon.cpp	2020-04-08 17:20:24.036179875 +0200
++++ src/autenticacao.gov/pteid-mw-pt/_src/eidmw/common/ConfigCommon_fixed.cpp	2020-04-08 17:32:07.842804664 +0200
+@@ -38,17 +38,17 @@
  #ifdef WIN32
    const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_CERTS_DIR   = {EIDMW_CNF_SECTION_GENERAL, EIDMW_CNF_GENERAL_CERTSDIR,   L"$home" WDIRSEP L"eidstore" WDIRSEP L"certs"};
  #else
@@ -12,6 +12,12 @@
  #else
 -  const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_CERTS_DIR_TEST   = {EIDMW_CNF_SECTION_GENERAL, EIDMW_CNF_GENERAL_CERTSDIR_TEST,  WDIRSEP L"usr" WDIRSEP L"local" WDIRSEP L"share" WDIRSEP L"certs_test" WDIRSEP};
 +  const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_CERTS_DIR_TEST   = {EIDMW_CNF_SECTION_GENERAL, EIDMW_CNF_GENERAL_CERTSDIR_TEST,  WDIRSEP L"usr" WDIRSEP L"share" WDIRSEP L"cartaodecidado" WDIRSEP L"certs_test" WDIRSEP};
+ #endif
+ #ifdef WIN32
+   const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_WEB_DIR = {EIDMW_CNF_SECTION_GENERAL, EIDMW_CNF_GENERAL_WEBDIR, L"$home" WDIRSEP L"web"};
+ #else
+-  const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_WEB_DIR = {EIDMW_CNF_SECTION_GENERAL, EIDMW_CNF_GENERAL_WEBDIR, WDIRSEP L"usr" WDIRSEP L"local" WDIRSEP L"share" WDIRSEP L"pteid-mw" WDIRSEP L"www"};
++  const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_WEB_DIR = {EIDMW_CNF_SECTION_GENERAL, EIDMW_CNF_GENERAL_WEBDIR, WDIRSEP L"usr" WDIRSEP L"share" WDIRSEP L"pteid-mw" WDIRSEP L"www"};
  #endif
  
    const struct CConfig::Param_Str CConfig::EIDMW_CONFIG_PARAM_GENERAL_LANGUAGE	 	=	{EIDMW_CNF_SECTION_GENERAL,	EIDMW_CNF_GENERAL_LANGUAGE,		L"nl"};
