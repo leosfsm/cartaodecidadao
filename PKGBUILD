@@ -30,7 +30,7 @@ conflicts=('classpath' 'cartaodecidadao-bin')
 
 source=('git+https://github.com/amagovpt/autenticacao.gov/#branch=openssl-migration' "00-fix_certs_path.patch" "01-fix_pteiddialogsQTsrv_path.patch")
 
-sha512sums=('SKIP' 'd906f37508c02bc286498237d93db172ba15c1fcd9ec177c2cb72549fc4972ef12b54c41f40d2f192c3b5826409adf5c57882b94a1a20d559e9682265566b6ba' 'e13b2b0817a46d49eef67693c5753fee47eb9db1ef0fa9cb79afe09631be6fe15a94086891cc12758e80e0b4d9c3088d0d861c1ca11d2362b43bfad6eeb3961e')
+sha512sums=('SKIP' 'ae14a1dcc72115894cb54dc3e166dcecb8c5855807cffe7d16b97a13b88e6f6310a1c30675636edbf86669c9c486b2f6733e185cfcfb31c479c79efffde22839' 'e13b2b0817a46d49eef67693c5753fee47eb9db1ef0fa9cb79afe09631be6fe15a94086891cc12758e80e0b4d9c3088d0d861c1ca11d2362b43bfad6eeb3961e')
 
 prepare(){
 	# Temporary Fix in order to compile with archlinux java handling neededs sudo and conflicts with GNU classpath
@@ -62,6 +62,7 @@ package() {
     mkdir -p ${pkgdir}/usr/share/cartaodecidadao/
     mkdir -p ${pkgdir}/usr/share/cartaodecidadao/certs_test
     mv ${pkgdir}/usr/share/certs/ ${pkgdir}/usr/share/cartaodecidadao/
+    mv ${pkgdir}/usr/share/pteid-mw/ ${pkgdir}/usr/share/cartaodecidadao/
     rm -rf ${pkgdir}/usr/local/
 
 	# Install desktop files
